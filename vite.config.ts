@@ -11,9 +11,10 @@ export default defineConfig({
         }),
     ],
     build: {
+        sourcemap: true,
         lib: {
             entry: path.resolve(__dirname, 'src/index.tsx'),
-            name: 'MyLib',
+            name: 'MyLib', // replace it with your library name
             formats: ['es', 'umd'],
             fileName: (format) => `index.${format}.js`,
         },

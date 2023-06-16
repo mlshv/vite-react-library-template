@@ -5,13 +5,13 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
+    "start": "storybook dev -p 6006",
+    "dev": "npm start",
+    "storybook": "npm start",
     "build-storybook": "storybook build -o docs && touch ./docs/.nojekyll"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -32,5 +32,8 @@
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
     "vite-plugin-dts": "^2.3.0"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
