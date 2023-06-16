@@ -11,19 +11,22 @@ Dead simple [Vite](https://vitejs.dev/) template for painless [React](https://re
 This is a custom template for Vite, so instead of `npm create vite` do this:
 ```shell
 npx degit mlshv/vite-react-library-template#main your-project-name
+cd your-project-name
+npm install
+npm start
 ```
 
-## Setup
+## Publishing the library
 
-1. Install dependencies: `npm install`
-2. Run the storybook: `npm start` or `npm run dev` or `npm run storybook`
-3. Build the package: `npm run build`
-
+1. Build the package: `npm run build`
+2. Open `package.json`, update package name, description, author, repository, remove `"private": true`.
+3. Run `npm publish`
 
 ## Publishing Storybook to GitHub pages
 
 Storybook static is built to `docs` directory which is under git. To publish it to GitHub Pages do this:
 - Publish this repo to GitHub.
+- Run `npm run build-storybook`, commit `docs` folder and push.
 - [Create a separate GitHub Pages repo](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site) if you haven't yet.
 - [Set up GitHub pages for this project](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site) to build from `docs` folder from `main` branch.
   - To do this go to this repo's settings and open `Pages` section (menu on the left side). Select `Source` -> `Deploy from a branch`, select `Branch` -> `main` and `/docs` folder.

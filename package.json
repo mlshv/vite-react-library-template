@@ -4,6 +4,12 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "author": "Mikhail Malyshev <topcatnocap@pm.me>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlshv/vite-react-library-template.git"
+  },
   "scripts": {
     "build": "tsc && vite build",
     "start": "storybook dev -p 6006",
